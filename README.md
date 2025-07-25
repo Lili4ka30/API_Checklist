@@ -1,8 +1,10 @@
 # API_Checklist
 Этот репозиторий содержит чек-лист тестирования API сервиса для продажи авто
 
-|ID|Название проверки|Тестовые данные (тело запроса)|Ожидаемый результат |cURL|
-|---|---|---|---|---|
+https://docs.google.com/spreadsheets/d/1H8Y7jBJgUQqbFpt4zt1RpXROB_bf0dmvcp2dnnF-SMM/edit?usp=sharing
+
+|ID|Название проверки|Тестовые данные|Ожидаемый результат|cURL|
+|:---|:---|:---|:---|:---|
 |РЕГИСТРАЦИЯ| | | | |
 |POST /api/auth/register/| | | | |
 |register_1|Регистрация пользователя с валидными данными|{   "email": "test123@gmail.com",   "first_name": "Клиент",   "last_name": "Тестовый",   "phone": "+79780658779",   "is_process_persondata": true,   "password": "qwerty123@",   "password2": "qwerty123@" }|HTTP Status: 201 Created  Тело ответа в формате JSON: {   "id": 1,   "email": "user@example.com",   "first_name": "string",   "last_name": "string",   "phones": [     "string"   ],   "is_process_persondata": true,   "is_confirmed_email": "string" }|curl --location 'URL/api/auth/register/' \ --header 'Content-Type: application/json' \ --data-raw '{   "email": "test123@gmail.com",   "first_name": "Клиент",   "last_name": "Тестовый",   "phone": "+79780658779",   "is_process_persondata": true,   "password": "qwerty123@",   "password2": "qwerty123@" }'|
